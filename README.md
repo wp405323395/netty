@@ -1,1 +1,9 @@
-#基于netty框架创建websocket后台服务，和创建一个基于nio的后台服务
+<h1>基于netty框架创建websocket后台服务，和创建一个基于nio的后台服务<h1>
+<hr/>
+<h2>NIO通讯</h2>
+<ul>
+	<li>Buffer缓冲区</li>
+	<li>Channel通道</li>
+	<li>Selector多路复用器</li>
+</ul>
+<h2>NIO是<strong>非阻塞同步IO</strong></h2>
