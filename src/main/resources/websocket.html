@@ -12,7 +12,7 @@
                 }else{
                     alert("WebSocket连接没有建立成功！！");
                 }
-            }, 3000);
+            }, 6000);
         }
         if(!window.WebSocket){
             window.WebSocket = window.MozWebSocket;
@@ -29,7 +29,7 @@
             socket.onopen = function(event){
                 var ta = document.getElementById('responseContent');
                 ta.value = "你当前的浏览器支持WebSocket,请进行后续操作\r\n";
-                heartBeat(socket,0);
+                //heartBeat(socket,0);
 
             };
 

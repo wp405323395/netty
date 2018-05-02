@@ -27,7 +27,10 @@ public class ServerSocketHandlerBrowser extends SimpleChannelInboundHandler<Obje
         if (o instanceof FullHttpRequest) {
             handHttpRequest(channelHandlerContext,  (FullHttpRequest)o);
         }else if (o instanceof WebSocketFrame) { //处理websocket连接业务
-            handWebsocketFrame(channelHandlerContext, (WebSocketFrame)o);
+//            ridx是readerIndex读取数据索引，位置从0开始
+//            widx是writeIndex写数据索引，位置从0开始
+//            cap是capacity缓冲区初始化的容量，默认256，可以通过Unpooled.buffer(8)设置，初始化缓冲区容量是8。
+                        handWebsocketFrame(channelHandlerContext, (WebSocketFrame)o);
         }
     }
 

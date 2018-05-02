@@ -23,7 +23,13 @@ public class ServerSocketHandlerNIO extends SimpleChannelInboundHandler<Object> 
 		}
 	}
 
-    private int loss_connect_time = 0;
+	@Override
+	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+		super.channelRead(ctx, msg);
+		System.out.println(msg);
+	}
+
+	private int loss_connect_time = 0;
     private int retryTime = 8;
 
     @Override

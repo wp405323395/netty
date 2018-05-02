@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  *
  */
 public class Main {
-    static boolean isBrowser = false;
+    static boolean isBrowser = true;
     public static void main(String[] args) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workGroup = new NioEventLoopGroup();
