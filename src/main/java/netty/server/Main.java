@@ -13,7 +13,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  *
  */
 public class Main {
-    static boolean isBrowser = true;
+
+    static boolean isBrowser = false;
     public static void main(String[] args) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workGroup = new NioEventLoopGroup();
@@ -24,7 +25,7 @@ public class Main {
             b.childHandler(new MyChannelInitializer(isBrowser));
             b.option(ChannelOption.SO_BACKLOG, 1024);
             b.childOption(ChannelOption.SO_KEEPALIVE, true);
-            System.out.println("服务端开启等待客户端连接....");
+            System.out.println("服务端开启等待客户端连接...."+(isBrowser?"浏览器":"Nio客户端"));
             Channel ch = b.bind(8888).sync().channel();
             ch.closeFuture().sync();
 

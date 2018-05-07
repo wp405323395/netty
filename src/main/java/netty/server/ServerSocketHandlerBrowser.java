@@ -30,7 +30,7 @@ public class ServerSocketHandlerBrowser extends SimpleChannelInboundHandler<Obje
 //            ridx是readerIndex读取数据索引，位置从0开始
 //            widx是writeIndex写数据索引，位置从0开始
 //            cap是capacity缓冲区初始化的容量，默认256，可以通过Unpooled.buffer(8)设置，初始化缓冲区容量是8。
-                        handWebsocketFrame(channelHandlerContext, (WebSocketFrame)o);
+            handWebsocketFrame(channelHandlerContext, (WebSocketFrame)o);
         }
     }
 
